@@ -2,7 +2,7 @@ postgres:
     container_name: postgres
     image: learninglayers/postgres
 achrails:
-    build: achrails
+    build: services/achrails-dev/achrails
     container_name: achrails
     volumes: 
         - ../achrails:/achrails
