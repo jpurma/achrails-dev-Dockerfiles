@@ -2,6 +2,7 @@ postgres:
     container_name: postgres
     image: learninglayers/postgres
 achrails:
+    #build: achrails
     build: services/achrails-dev/achrails
     container_name: achrails
     volumes: 
@@ -14,7 +15,7 @@ achrails:
     # linking is used to make sure that postgres and oidc are launched first
     links:
         - postgres
-        - oidc        
-    actions:
-        - create_oidcclients: [achrails.env]
+    #    - oidc        
+    #actions:
+    #    - create_oidcclients: [achrails.env]
 

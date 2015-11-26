@@ -4,10 +4,10 @@ MAINTAINER Jukka Purma <jukka.purma ÄT aalto.fi>
 # Doing the bundle install with local files so that its result gets cached.
 # If these are not up to date with the github version of achrails, it spells trouble,
 # but couldn't get COPY or ADD working with files downloaded from the Dockerfile.  
-# WORKDIR /tmp
-# COPY Gemfile Gemfile
-# COPY Gemfile.lock Gemfile.lock
-# RUN bundle install
+WORKDIR /tmp
+COPY Gemfile Gemfile
+COPY Gemfile.lock Gemfile.lock
+RUN bundle install
 
 # RUN mkdir /achrails
 
@@ -18,5 +18,4 @@ MAINTAINER Jukka Purma <jukka.purma ÄT aalto.fi>
 # COPY database.yml /achrails/config/database.yml
 
 WORKDIR /achrails
-
-#CMD ["bash", "start-achrails.sh"]
+CMD ["bash", "start-achrails.sh"] 
