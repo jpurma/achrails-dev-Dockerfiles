@@ -1,9 +1,11 @@
-# achrails-Dockerfiles
+# achrails-dev-Dockerfiles
 
-Here are Dockerfiles for creating achrails-server inside Layers Box.
+These are settings for creating development environment for Achrails inside Layers Box.
 
-This will create 2 containers, where one has achrails running on Ruby on Rails and the other has postgres database that achrails will use. 
+This will create 2 containers, where one is postgres and the other is a stub of achrails -- Ruby on Rails and all necessary gems prebuilt, but no code to run. In the container the code is linked to ../achrails, relative to Layers Box instance's location in host machine.
 
-The environment configuration should come from common.env (from LayersBox, not here) and achrails.env (here), but what goes there and how the configuration is written there is still open. 
+Instructions for using this are in https://github.com/learning-layers/achrails#installing-for-development-with-layers-box 
 
-Created by Jukka Purma and Samuli Raivio
+The environment configuration should come from common.env (from LayersBox, not here) and achrails.env (here). 
+
+Created by Jukka Purma, based on https://github.com/learning-layers/achrails-Dockerfiles
