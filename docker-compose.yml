@@ -15,7 +15,7 @@ achrails:
     # linking is used to make sure that postgres and oidc are launched first
     links:
         - postgres
-    #    - oidc        
-    #actions:
-    #    - create_oidcclients: [achrails.env]
+        - oidc        
+    actions:
+        - create_oidcclients: [achrails.env]
 
